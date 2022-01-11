@@ -7,7 +7,7 @@ document.body.innerHTML = `<div class="heading-container">
 
 const getData = async () => {
   try {
-    const data = await fetch("https://cat-fact.herokuapp.com/facts/random");
+    const data = await fetch("https://randomfox.ca/floof/");
     const fox = await data.json();
     // console.log(typeof (fox))
     mainContainer.innerHTML = "";
@@ -27,7 +27,7 @@ const displayData = (obj) => {
   mainContainer.innerHTML += `
     <div id="subcont" class="container">
    <div i> <span> Fox</div>
-        <img id="myImg" src="https:\/\/randomfox.ca\/images\/82.jpg" alt=""  >
+        <img id="myImg" src="${obj.image}" alt=""  >
 <div>Link = ${obj.link}</div>        
     `;
 };
